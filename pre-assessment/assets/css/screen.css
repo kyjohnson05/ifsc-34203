@@ -71,6 +71,11 @@ body {
 	margin-top: 5px;
 	margin-bottom: 15px;
 }
+#content p img{
+	float:right;
+	border:6px solid red;
+	margin: 30px;
+}
 #footer {
 	background-color: #000;
 	color: #FFF;
@@ -85,6 +90,10 @@ body {
 
 .alert{
     background:red
+}
+
+.fav-link:hover{
+	background-color: red;
 }
 
 h2,h3,h4{
