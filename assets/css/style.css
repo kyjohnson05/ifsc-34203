@@ -25,3 +25,24 @@ header.primary a {
   text-decoration: none;
   color:#ffffff;
 }
+
+header.secondary h2 {
+  position: relative;
+  font-size: 40px;
+}
+
+header.secondary ul {
+  font-family: "VT323", sans-serif;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+header.secondary nav a {
+  color: #fff;
+  text-decoration: none;
+}
