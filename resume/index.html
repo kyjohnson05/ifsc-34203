@@ -1,0 +1,151 @@
+<header class="container" id="top">
+  <!-- Main navigation -->
+  <nav class="primary">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main -->
+<main itemscope itemtype="https://schema.org/Person" class="container">
+  <h1 class="page-title" itemprop="name">Kyle Johnson</h1>
+
+  <section id="about">
+    <h2>Personal Details</h2>
+
+    <div class="bio">
+      <img itemprop="image" src="img/professional.jpeg" alt="Your Name">
+      <p itemprop="description">
+        Meet Kyle, an IT Support Specialist with 2 years of experience, and a third-year college student in Computer Science. Skilled in coding, hardware configuration, and troubleshooting, he is ready to handle software and hardware issues at a moment's notice.
+      </p>
+    </div>
+
+    <dl class="details">
+      <dt>Name</dt>
+      <dd itemprop="name">
+        <span itemprop="givenName">Kyle</span> <span itemprop="familyName">Johnson</span>
+      </dd>
+
+      <dt>Date of birth</dt>
+      <dd><time itemprop="birthDate" datetime="2005-07-32">07/22/2005</time></dd>
+
+      <dt>Nationality</dt>
+      <dd itemprop="nationality">United States</dd>
+
+      <dt>Location</dt>
+      <!-- Keep original text, but model as Place for better schema correctness -->
+      <dd itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+        <span itemprop="name">Arkansas</span>
+      </dd>
+
+      <dt>Telephone</dt>
+      <dd>
+        <!-- tel: should be digits; keep visible text as-is -->
+        <a itemprop="telephone" href="tel:15018040777">1.501.804.0777</a>
+      </dd>
+
+      <dt>Email</dt>
+      <dd>
+        <a itemprop="email" href="mailto:johnsonky56@gmail.com">johnsonky56@gmail.com</a>
+      </dd>
+
+      <dt>Address</dt>
+      <dd itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">604 Sorrells Drive</span>
+        <span itemprop="addressLocality">Jacksonville</span>
+        <span itemprop="postalCode">72076</span>
+        <span itemprop="addressCountry">USA</span>
+      </dd>
+    </dl>
+
+    <ul class="related-links">
+      <li><a itemprop="sameAs" rel="me" href="https://github.com/kyjohnson05"> github</a></li>
+      <li><a itemprop="sameAs" rel="me" href="http://linkedin.com/in/kyle-johnson-539b8328b">linkedin</a></li>
+      <li><a itemprop="url" href="img/resume.pdf" download>pdf resume</a></li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li class="skill" itemprop="knowsAbout">HTML</li>
+      <li class="skill" itemprop="knowsAbout">CSS</li>
+      <li class="skill" itemprop="knowsAbout">C/C++</li>
+      <li class="skill" itemprop="knowsAbout">Python</li>
+      <li class="skill" itemprop="knowsAbout">Assembly</li>
+      <li class="skill" itemprop="knowsAbout">SQL</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <!-- current job -->
+    <article class="job">
+      <!-- jobTitle is valid on Person; this is still within Person scope -->
+      <h3 itemprop="jobTitle">Computer Services Specialist</h3>
+
+      <!-- worksFor is valid on Person -->
+      <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+        <span itemprop="name">UALR IT Services Assistance Center</span>
+        <span>January 2024 - Present</span>
+
+        <p itemprop="description">Assisted students and faculty with technological concerns regarding the University of Arkansas at Little Rock.</p>
+
+        <span itemprop="location" itemscope itemtype="https://schema.org/Place">
+          <a itemprop="url" href="https://ualr.edu/itservices/">Company URL</a>
+          <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Little Rock, AR</span>
+          </span>
+        </span>
+      </div>
+    </article>
+
+    <!-- Previous Jobs -->
+    <article class="job">
+      <h3 itemprop="jobTitle">Intern</h3>
+
+      <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+        <span itemprop="name">Momentum Venture Labs</span>
+
+        <span itemprop="location" itemscope itemtype="https://schema.org/Place">
+          <a itemprop="url" href="https://www.momentumv.co/">Company URL</a>
+          <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Remote</span>
+          </span>
+        </span>
+      </span>
+
+      <!-- Keep original visible date format; Google won't bind it perfectly, but it won't warn -->
+      <div>
+        <span>August 2021</span> -
+        <span>November 2021</span>
+      </div>
+
+      <p itemprop="description">Collaborated in teams to design project outlines for clients.</p>
+    </article>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+
+    <article class="certificate" itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+      <h3 itemprop="description"><abbr title="Bachelor of Science">BS</abbr> Computer Science</h3>
+      <span itemprop="name">University of Arkansas at Little Rock</span>
+      <span itemprop="location" itemscope>Little Rock, AR</span>
+      <span>2023-Present</span>
+    </article>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div id="copyright">
+    &copy; 2026 Kyle Johnson | <a href="#top">Top</a>
+  </div>
+</footer>
+ 
