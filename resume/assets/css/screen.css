@@ -31,13 +31,17 @@ html {
 /* ------ Typography -------*/
 body {
   font-family: "Bebas Neue", sans-serif;
+  background: var(--main-bg-color);
+  color: var(--primary-type-color);
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ------ Fluid Images -------*/
 
 img {
   max-width: 100%;
-  border: 1px solid #ffffff;
+  border: 2px solid var(--accent-color-1);
 }
 
 /* ------ Design Time -------*/
@@ -47,41 +51,28 @@ img {
 }
 
 /* ------ Global Styles -------*/
-body {
-  background: var(--main-bg-color);
+
+a {
   color: var(--primary-type-color);
-  line-height: 1.6;
+  transition: background-color 0.5s ease;
 }
 
-a:link,
-a:visited {
-  color: var(--primary-type-color);
-}
-
-nav {
-  padding: 1px;
-}
 nav ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 20px 20px 0px 20px;
-}
-nav li {
+  padding: 20px 20px 0px;
   list-style-type: none;
 }
 
-nav a:link, nav a:visited {
+nav a {
   display: block;
   padding: 8px 16px;
   border: 1px solid #ffffff;
-  text-align: center;
   text-decoration: none;
-  color: var(--primary-type-color);
+  text-align: center;
   text-transform: uppercase;
-  font-size: 0.75em;
+  font-size: 1.2em;
   background: rgba(0, 0, 0, 0.65);
-  transition: background-color 0.5s ease;
-  color: #ffffff;
 }
 
 nav a:hover {
@@ -96,40 +87,35 @@ main {
 main h1 {
   grid-area: title;
   text-align: right;
-  position: relative;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 40px 0;
-  padding-left: 40px;
+  border-bottom: 2px solid var(--accent-color-1);
+  padding-bottom: 10px;
 }
-main h1:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 60%;
-  height: 2px;
-  background: var(--accent-color-1);
-  transform: translateY(-50%);
-}
+
 
 dl {
   font-size:1.1rem;
   display: grid;
   /*shorthand*/
-  grid-template: repeat(8, 50px) / 8em 1fr;
+  grid-template-columns: 8em minmax(180px, 30em);
+  grid-auto-rows: max-content minmax(50px, 1.5em);
 }
 
 dt {
   font-weight: 800;
   grid-column: 1;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--accent-color-1);
 }
 dd {
-  margin: 0;
   grid-column: 2;
+}
+
+dt, dd {
+  margin: 0;
   padding: 10px 0;
   border-bottom: 1px solid var(--accent-color-1);
+  line-height: 1.4;
+  letter-spacing: 1.3px;
 }
 
 section {
@@ -143,6 +129,11 @@ section h2 {
   border-bottom: 1px solid var(--accent-color-1);
   padding-bottom: 10px;
   margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 18px;
 }
 
 .related-links {
@@ -152,16 +143,12 @@ section h2 {
   right: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  order: 99;
-  margin-top: auto;
-  padding: 20px 0;
-  padding-left: 0;
-  margin: 0;
   list-style-type: none;
   gap: 15px;
+  padding: 20px 0;
   background: var(--main-bg-color);
   border-top: 1px solid var(--accent-color-1);
+  font-size: 1.35em;
 }
 .related-links .svg-inline--fa {
   font-size: 1.8em;
@@ -171,14 +158,9 @@ section h2 {
 .related-links a {
   border: 1px solid var(--accent-color-1);
   padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  color: #222222;
-  text-transform: uppercase;
   font-size: 0.75em;
   background: rgba(0, 0, 0, 0.65);
-  transition: background-color 0.5s ease;
-  color: #fff;
+  text-decoration: none;
 }
 
 .related-links a:hover {
@@ -191,8 +173,6 @@ section h2 {
   margin-right: 0 10px;
 }
 
-#skills {
-}
 #skills li {
   list-style-type: '☆  ';
 }
@@ -209,6 +189,7 @@ section h2 {
 .job *[itemprop="addressLocality"],
 .certificate *[itemprop="name"] {
   display: block;
+  max-width: 100%;
 }
 
 .job h3 {
@@ -220,20 +201,18 @@ footer {
   padding: 20px 0;
 }
 
-
 /* Reorder Source Using Grid */
 main.container {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   position: relative;
   padding-bottom: 100px;
   grid-template-areas:
     "title"
     "about"
     "skills"
-    "education"
     "experience"
+    "education"
     "related";
 }
 
@@ -259,7 +238,7 @@ main.container {
   gap: 20px;
 }
 #about h2 {
-  grid-area: personal-details;
+  grid-area: personal-details; /* added this to keep the "personal details" title at the top of the "about" box */
   font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -267,12 +246,18 @@ main.container {
 }
 #skills {
   grid-area: skills;
+  font-size: 20px;
+  letter-spacing: 0.8px;
 }
 #experience {
   grid-area: experience;
+  font-size: 18px;
+  letter-spacing: 0.8px;
 }
 #education {
   grid-area: education;
+  font-size: 20px;
+  letter-spacing: 0.8px;
 }
 
 /* Media Queries */
@@ -285,12 +270,13 @@ main.container {
   }
  
   main.container{
-  grid-template-columns: 36.5% auto;  
+  grid-template-columns: 1fr;  
   grid-template-areas:
-    "title title"
-    "about about"
-    "skills experience"
-    ". education"
+    "title"
+    "about"
+    "skills"
+    "experience"
+    "education"
     ;  
   } 
   
@@ -300,7 +286,7 @@ main.container {
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "personal-details personal-details"
-      "bio details";
+    "bio details";
   padding-bottom: 20px;
 }
 .bio{
@@ -321,5 +307,25 @@ main.container {
 
 @media screen and (min-width:992px){
   
+  header.container,
+ main.container{
+  max-width: 1100px;
+  }
+ 
+  main.container{
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "title title"
+    "about skills"
+    "experience experience"
+    "education education"
+    ;  
+  gap: 40px;
+  word-wrap: break-word;
+  }
   
+  body {
+    font-size: 1.1rem;
+  }
+
 }
