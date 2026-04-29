@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Discovered while testing that the DPR for me is 2,
+    but setting it to 1 in DevTools allowed the correct image to be selected -->
+    <img srcset="assets/img/dog-400.jpg 400w,
+    assets/img/dog-600.jpg 600w,
+    assets/img/dog-800.jpg 800w"
+    sizes="(max-width: 500px) 400px,
+    (max-width: 700px) 600px,
+    800px"
+    src="assets/img/dog-400.jpg"
+    alt="Dog shaking owner's hand">
+</body>
+</html>
