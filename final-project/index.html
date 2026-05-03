@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woof 'Em!</title>
+    <link rel="icon" href="assets/img/dog_favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/img/dog_favicon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+    <header class="container">
+        <h1 class="page-title" itemprop="name">Woof 'Em!</h1>
+        <nav class="primary" aria-label="Main navigation">
+            <div id="menuToggle">
+                <input type="checkbox" id="menuCheckbox" aria-label="Toggle navigation menu"/>
+                <label for="menuCheckbox" class="hamburger-label" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label> 
+                <ul id="menu">
+                    <li><a href="#training">Training</a></li>
+                    <li><a href="#tips">Tips</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="about" itemscope itemtype="https://schema.org/Person">
+            <img itemprop="image"
+                srcset="assets/img/jacob-300.png 300w,
+                assets/img/jacob-800.png 800w,
+                assets/img/jacob-1200.png 1200w"
+                sizes="(max-width: 768px) 300px,
+                (max-width: 1024px) 800px,
+                1200px"
+                src="assets/img/jacob-300.png"
+                alt="Jacob the dog">
+            <h2 itemprop="name">Meet Jacob</h2>
+            <p itemprop="description">
+                Jacob is my energetic fur-ball who loves having something to do,
+                making training a thrill for him and easy for me. I want other dog
+                owners to have the same experience, as training dogs should feel fun.
+            </p>
+        </section>
+        <section id="training">
+            <h3>What's taught here...</h3>
+            <div class="commands">
+                <img srcset="assets/img/commands-300.png 300w,
+                    assets/img/commands-800.png 800w,
+                    assets/img/commands-1200.png 1200w"
+                    sizes="(max-width: 768px) 300px,
+                    (max-width: 1024px) 800px,
+                    1200px"
+                    src="assets/img/commands-300.png"
+                    alt="Commands">
+                <h4>Regularly Followed Commands</h4>
+                <p>Teach your furry friend some basic commands that will encourage good behavior</p>
+            </div>
+            <div class="tricks">
+                <img srcset="assets/img/tricks-300.png 300w,
+                    assets/img/tricks-800.png 800w,
+                    assets/img/tricks-1200.png 1200w"
+                    sizes="(max-width: 768px) 300px,
+                    (max-width: 1024px) 800px,
+                    1200px"
+                    src="assets/img/tricks-300.png"
+                    alt="Tricks">
+                <h4>Simple Tricks</h4>
+                <p>Teach your furry friend a few cool tricks to impress yourself and others</p>
+            </div>
+        </section>
+        <section class="sources">
+            <h3>Recognize the Sources Used!</h3>
+            <p>
+                Although I mention my personal experiences in dog training,
+                please note that the following organizations' material helped me.
+            </p>
+            <ul>
+                <li itemscope itemtype="https://schema.org/Organization">
+                    <a itemprop="url" href="https://americanstandardk9.com/">American Standard Dog Training</a>
+                </li>
+                <li itemscope itemtype="https://schema.org/Organization">
+                    <a itemprop="url" href="https://www.aspca.org/">ASPCA</a>
+                </li>
+                <li itemscope itemtype="https://schema.org/Organization">
+                    <a itemprop="url" href="https://www.akc.org/">American Kennel Club</a>
+                </li>
+                <li itemscope itemtype="https://schema.org/Organization">
+                    <a itemprop="url" href="https://www.chewy.com/">Chewy</a>
+                </li>
+            </ul>
+        </section>
+        <section id="tips">
+            <h3>Tips for Training Your Dog</h3>
+            <ul>
+                <li>
+                    <span>Stay Consistent</span>
+                    <p>Dogs thrive on routine, so make sure to practice commands regularly.</p>
+                </li>
+                <li>
+                    <span>Positive Reinforcement</span>
+                    <p>Reward good behavior with treats, praise, or playtime to encourage your dog.</p>
+                </li>
+                <li>
+                    <span>Short Training Sessions</span>
+                    <p>Keep training sessions short and fun to maintain your dog's interest and focus.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="faq" itemscope itemtype="https://schema.org/FAQPage">
+            <h3>Frequently Asked Questions</h3>
+            <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <h4 itemprop="name">How long does it take to train a dog?</h4>
+                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <p itemprop="text">It depends on the dog's age, breed, and the consistency of training. Basic commands can be taught within a few hours, while advanced ones may take several weeks.</p>
+                </div>
+            </div>
+            <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <h4 itemprop="name">What is the best age to start training a dog?</h4>
+                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <p itemprop="text">The best age to start training a dog is as early as possible, ideally when they are a puppy; however, dogs of any age can learn new behaviors.</p>
+                </div>
+            </div>
+            <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <h4 itemprop="name">What if I have tried training before and it has failed?</h4>
+                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <p itemprop="text">If previous training attempts have failed, speak to a professional trainer for assistance in developing a more effective training plan.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <div>
+            &copy; 2026 | Kyle Johnson
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
