@@ -9,8 +9,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
-    <header class="container">
-        <h1 class="page-title" itemprop="name">Woof 'Em!</h1>
+    <header>
+        <h1 class="page-title" itemprop="name">
+            <img srcset="assets/img/woofem-logo-200.png 200w,
+                assets/img/woofem-logo-400.png 400w,
+                assets/img/woofem-logo-600.png 600w"
+                sizes="(max-width: 768px) 200px,
+                (max-width: 1024px) 400px,
+                600px"
+                src="assets/img/woofem-logo-200.png"
+                alt="Woof 'Em!">
+        </h1>
         <nav class="primary" aria-label="Main navigation">
             <div id="menuToggle">
                 <input type="checkbox" id="menuCheckbox" aria-label="Toggle navigation menu"/>
@@ -93,7 +102,7 @@
                 </li>
             </ul>
         </section>
-        <section id="tips">
+        <section class="tips" id="tips">
             <h3>Tips for Training Your Dog</h3>
             <ul>
                 <li>
@@ -111,28 +120,39 @@
             </ul>
         </section>
         <section id="faq" itemscope itemtype="https://schema.org/FAQPage">
-            <h3>Frequently Asked Questions</h3>
-            <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                <h4 itemprop="name">How long does it take to train a dog?</h4>
-                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                    <p itemprop="text">It depends on the dog's age, breed, and the consistency of training. Basic commands can be taught within a few hours, while advanced ones may take several weeks.</p>
+            <div class="wrapper">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="accordion" aria-expanded="false" aria-controls="pannel1" id="faq1">
+                        <h4 itemprop="name">How long does it take to train a dog?</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="pannel" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <p itemprop="text">It depends on the dog's age, breed, and the consistency of training. Basic commands can be taught within a few hours, while advanced ones may take several weeks.</p>
+                    </div>
                 </div>
-            </div>
-            <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                <h4 itemprop="name">What is the best age to start training a dog?</h4>
-                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                    <p itemprop="text">The best age to start training a dog is as early as possible, ideally when they are a puppy; however, dogs of any age can learn new behaviors.</p>
+                <div class="faq" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="accordion" aria-expanded="false" aria-controls="pannel2" id="faq2">
+                        <h4 itemprop="name">What is the best age to start training a dog?</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="pannel" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The best age to start training a dog is as early as possible, ideally when they are a puppy; however, dogs of any age can learn new behaviors.</p>
+                    </div>
                 </div>
-            </div>
-            <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                <h4 itemprop="name">What if I have tried training before and it has failed?</h4>
-                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                    <p itemprop="text">If previous training attempts have failed, speak to a professional trainer for assistance in developing a more effective training plan.</p>
+                <div class="faq" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="accordion" aria-expanded="false" aria-controls="pannel3" id="faq3">
+                        <h4 itemprop="name">What if I have tried training before and it has failed?</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="pannel" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <p itemprop="text">If previous training attempts have failed, speak to a professional trainer for assistance in developing a more effective training plan.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="container">
+    <footer>
         <div>
             &copy; 2026 | Kyle Johnson
         </div>
