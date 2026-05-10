@@ -1,3 +1,4 @@
+const bark = document.getElementById('bark-link');
 document.documentElement.classList.add("js");
 
 var acc = document.getElementsByClassName("accordion");
@@ -16,3 +17,10 @@ var acc = document.getElementsByClassName("accordion");
             pannel.classList.toggle("open");
         });
     }
+
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    bark.currentTime = 0;
+    bark.play();
+  });
+});
